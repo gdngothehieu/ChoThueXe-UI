@@ -38,46 +38,58 @@ export default function Home() {
       <div className="grid grid-cols-3 items-center gap-4">
         <div className="mb-4">
           <Image
-            src="./hinhxe/xe7cho.jpg"
+            src="/hinhxe/xe7cho.jpg"
             className="h-auto w-full rounded-lg shadow-md shadow-black/20 dark:shadow-white/20"
             alt="Hollywood Sign on The Hill"
+            width="1000"
+            height="1000"
           />
         </div>
         <div className="mb-4">
           <Image
-            src="./hinhxe/xe4cho3.jpg"
+            src="/hinhxe/xe4cho3.jpg"
             className="h-auto w-full rounded-lg shadow-md shadow-black/20 dark:shadow-white/20"
             alt="Five Lands National Park"
+            width="1000"
+            height="1000"
           />
         </div>
         <div className="mb-4">
           <Image
-            src="./hinhxe/xe4cho4.png"
+            src="/hinhxe/xe4cho4.png"
             className="h-auto w-full rounded-lg shadow-md shadow-black/20 dark:shadow-white/20"
             alt="Los Angeles Skyscrapers"
+            width="1000"
+            height="1000"
           />
         </div>
       </div>
       <div className="grid grid-cols-3 items-center gap-4">
         <div className="mb-4">
           <Image
-            src="./hinhxe/xe4cho5.jpg"
+            src="/hinhxe/xe4cho5.jpg"
             className="h-auto w-full rounded-lg shadow-md shadow-black/20 dark:shadow-white/20"
             alt="Hollywood Sign on The Hill"
+            width="1000"
+            height="1000"
           />
         </div>
         <div className="mb-4">
           <Image
-            src="./hinhxe/xe162.jpg"
+            src="/hinhxe/xe162.jpg"
             className="h-auto w-full rounded-lg shadow-md shadow-black/20 dark:shadow-white/20"
             alt="Five Lands National Park"
+            width="1000"
+            height="1000"
           />
         </div>
         <div className="mb-4">
           <Image
-            src="./hinhxe/xe166.jpg"
+            src="/hinhxe/xe166.jpg"
             className="h-auto w-full rounded-lg shadow-md shadow-black/20 dark:shadow-white/20"
             alt="Los Angeles Skyscrapers"
+            width="1000"
+            height="1000"
           />
         </div>
       </div>
