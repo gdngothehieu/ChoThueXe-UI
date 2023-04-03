@@ -37,21 +37,21 @@ export default function Home() {
       </h1>
       <div className="grid grid-cols-3 items-center gap-4">
         <div className="mb-4">
-          <img
+          <Image
             src="./hinhxe/xe7cho.jpg"
             className="h-auto w-full rounded-lg shadow-md shadow-black/20 dark:shadow-white/20"
             alt="Hollywood Sign on The Hill"
           />
         </div>
         <div className="mb-4">
-          <img
+          <Image
             src="./hinhxe/xe4cho3.jpg"
             className="h-auto w-full rounded-lg shadow-md shadow-black/20 dark:shadow-white/20"
             alt="Five Lands National Park"
           />
         </div>
         <div className="mb-4">
-          <img
+          <Image
             src="./hinhxe/xe4cho4.png"
             className="h-auto w-full rounded-lg shadow-md shadow-black/20 dark:shadow-white/20"
             alt="Los Angeles Skyscrapers"
@@ -60,21 +60,21 @@ export default function Home() {
       </div>
       <div className="grid grid-cols-3 items-center gap-4">
         <div className="mb-4">
-          <img
+          <Image
             src="./hinhxe/xe4cho5.jpg"
             className="h-auto w-full rounded-lg shadow-md shadow-black/20 dark:shadow-white/20"
             alt="Hollywood Sign on The Hill"
           />
         </div>
         <div className="mb-4">
-          <img
+          <Image
             src="./hinhxe/xe162.jpg"
             className="h-auto w-full rounded-lg shadow-md shadow-black/20 dark:shadow-white/20"
             alt="Five Lands National Park"
           />
         </div>
         <div className="mb-4">
-          <img
+          <Image
             src="./hinhxe/xe166.jpg"
             className="h-auto w-full rounded-lg shadow-md shadow-black/20 dark:shadow-white/20"
             alt="Los Angeles Skyscrapers"
