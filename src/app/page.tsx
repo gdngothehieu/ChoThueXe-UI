@@ -3,13 +3,16 @@ import Image from "next/image";
 import { Inter } from "next/font/google";
 import styles from "./page.module.css";
 import { Dropdown } from "flowbite-react";
+import Form from "./components/Form";
+import Commitment from "./components/Commitment";
+import GoogleApp from "./components/GoogleMap";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
     <div className="container mx-auto">
       <div
-        className="h-400 overflow-hidden  justify-center"
+        className="h-100 overflow-hidden  justify-center"
         style={{ background: "#edf2f7" }}
       >
         <div
@@ -94,15 +97,8 @@ export default function Home() {
         </div>
       </div>
       <div className="flex ">
-        <div className="w-1/2  ">
-          <p>Chúng tôi cam kết</p>
-          <p>Chúng tôi cam kết</p>
+        <Commitment />
 
-          <p>Chúng tôi cam kết</p>
-          <p>Chúng tôi cam kết</p>
-          <p>Chúng tôi cam kết</p>
-          <p>Chúng tôi cam kết</p>
-        </div>
         <div
           className="w-1/2 bg-cover bg-center  text-white py-40 px-10 object-fill "
           style={{
@@ -112,15 +108,7 @@ export default function Home() {
         ></div>
       </div>
       <div className="flex mt-6">
-        <div className="w-1/2  ">
-          <p>Chúng tôi cam kết</p>
-          <p>Chúng tôi cam kết</p>
-
-          <p>Chúng tôi cam kết</p>
-          <p>Chúng tôi cam kết</p>
-          <p>Chúng tôi cam kết</p>
-          <p>Chúng tôi cam kết</p>
-        </div>
+        <Commitment />
         <div
           className="w-1/2 bg-cover bg-center  text-white py-40 px-10 object-fill "
           style={{
@@ -128,140 +116,31 @@ export default function Home() {
               "url(https://images.unsplash.com/photo-1558981806-ec527fa84c39?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80)",
           }}
         >
-          <form>
-            <div className="grid gap-6 mb-6 ">
-              <div>
-                <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                  Họ và Tên
-                </label>
-                <input
-                  type="text"
-                  id="full_name"
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                  placeholder="Họ và Tên"
-                  required
-                />
-              </div>
-              <div>
-                <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                  Số Điện Thoại
-                </label>
-                <input
-                  type="tel"
-                  id="phone_number"
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                  placeholder="Số Điện Thoại"
-                  pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
-                  required
-                />
-              </div>
-              <div>
-                <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                  Địa chỉ
-                </label>
-                <input
-                  type="text"
-                  id="address"
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                  placeholder="Địa chỉ"
-                  pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
-                  required
-                />
-              </div>
-              <div style={{ display: "flex" }}>
-                <div>
-                  <Dropdown label="Tỉnh/Thành Phố" dismissOnClick={false}>
-                    <Dropdown.Item>Thành Phố Hồ Chí Minh</Dropdown.Item>
-                  </Dropdown>
-                </div>
-                <div>
-                  <Dropdown label="Quận/Huyện" dismissOnClick={false}>
-                    <Dropdown.Item>Tân Bình</Dropdown.Item>
-                  </Dropdown>
-                </div>
-                <div>
-                  <Dropdown label="Phường/Xã" dismissOnClick={false}>
-                    <Dropdown.Item>Tân Bình</Dropdown.Item>
-                  </Dropdown>
-                </div>
-              </div>
-              <div>
-                <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                  Unique visitors (per month)
-                </label>
-                <input
-                  type="number"
-                  id="visitors"
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                  placeholder=""
-                  required
-                />
-              </div>
-            </div>
-            <div className="mb-6">
-              <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                Email address
-              </label>
-              <input
-                type="email"
-                id="email"
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                placeholder="john.doe@company.com"
-                required
-              />
-            </div>
-            <div className="mb-6">
-              <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                Password
-              </label>
-              <input
-                id="password"
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                placeholder="•••••••••"
-                required
-              />
-            </div>
-            <div className="mb-6">
-              <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                Confirm password
-              </label>
-              <input
-                type="password"
-                id="confirm_password"
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                placeholder="•••••••••"
-                required
-              />
-            </div>
-            <div className="flex items-start mb-6">
-              <div className="flex items-center h-5">
-                <input
-                  id="remember"
-                  type="checkbox"
-                  value=""
-                  className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800"
-                  required
-                />
-              </div>
-              <label className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">
-                I agree with the{" "}
-                <a
-                  href="#"
-                  className="text-blue-600 hover:underline dark:text-blue-500"
-                >
-                  terms and conditions
-                </a>
-                .
-              </label>
-            </div>
-            <button
-              type="submit"
-              className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-            >
-              Submit
-            </button>
-          </form>
+          <Form />
         </div>
+      </div>
+      <div className="flex mt-6">
+        <div
+          className="w-1/2 bg-cover bg-center py-40 px-10 object-fill "
+          style={{ backgroundImage: "url(./hinhxe/xe4cho3.jpg)" }}
+        ></div>
+        <div className="w-1/2 bg-cover bg-center  px-10 object-fill ">
+          <h1 className="mb-2 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">
+            Liên hệ với chúng tôi{" "}
+          </h1>
+          <p className="mb-2 lg:mb-16 font-light  text-gray-500 dark:text-gray-400 sm:text-xl">
+            Công ty
+          </p>
+          <p className="mb-2 lg:mb-16 font-light  text-gray-500 dark:text-gray-400 sm:text-xl">
+            Địa chỉ: 52/5 T Đường Xuân Thới Đông 3, X. XTĐ, H. HM
+          </p>
+          <p className="mb-2 lg:mb-16 font-light  text-gray-500 dark:text-gray-400 sm:text-xl">
+            Mobile: +0939 208 128
+          </p>
+        </div>
+      </div>
+      <div className="mt-8" style={{ height: "100px" }}>
+        <GoogleApp />
       </div>
     </div>
   );
